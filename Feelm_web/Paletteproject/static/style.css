@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+div{
+    border: blue 1px solid;
+}
+.root{
+    width: 500px;
+    display: flex;
+    /* padding-left:30px; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.menu{
+    width: 500px;
+    height: 50px;
+    background-color:yellowgreen;
+    color: white;
+    position: fixed;
+}
+.menu_sub{
+    width: 500px;
+    height: 50px;
+}
+.inbox{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}

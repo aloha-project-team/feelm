@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" type = "text/css" href="{% static 'css/result.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+{% endblock %}
+
+{% block content %}
+
+<h1>결과페이지</h1>
+<h3> 
+    {% if is_exist %}
+        {{ account }} 님의 감정분석 결과
+    {% else %}
+        계정입력안함
+    {% endif %}
+</h3>
+<div class="inbox">
+    <!-- 콘텐트1 팔레트 -->
+    <div class="content">
+        <div class="head_option">
+            <h2>Emotion Palette</h2>
+            <div>원하는 모양의 팔레트를 선택해보세요</div>
+            <div class="check">
+                <input type="radio" name="template" id='square' onclick="changeTemplate()" checked/>네모<br>
+                <input type="radio" name="template" id='circle' onclick="changeTemplate()" />동그라미<br>
+                <input type="radio" name="template" id='heart' onclick="changeTemplate()" />하트<br>
+                <input type="radio" name="template" id='animal' onclick="changeTemplate()" />동물<br>
+            </div> 
+        </div>
+        <!-- 네모 -->
+        <div class="palette" id="square_div">
+            {% for p1 in palette %}
+            <div class="in_palette">
+                {% for day in p1 %}
+                    {% if day == 1 %}
+                    <svg class="one">
+                        <rect width="15" height="15">
+                    </svg>
+                    {% elif day == 2 %}
+                    <svg class="two">
+                         <rect width="15" height="15">
+                    </svg>
+                    {% elif day == 3 %}
+                    <svg class="three">
+                         <rect width="15" height="15">
+                    </svg>
+                    {% elif day == 4 %}
+                    <svg class="four">
+                         <rect width="15" height="15">
+                    </svg>
+                    {% elif day == 5 %}
+                    <svg class="five">
+                         <rect width="15" height="15">
+                    </svg>
+                    {% elif day == 6 %}
+                    <svg class="six">
+                         <rect width="15" height="15">
+                    </svg>
+                    {% elif day == 7 %}
+                    <svg class="seven">
+                         <rect width="15" height="15">
+                    </svg>
+                    {% else %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+        <!-- 동그라미 -->
+        <div class="palette" id="circle_div" style="display: none;">
+            {% for p1 in palette %}
+            <div class="in_palette">
+                {% for day in p1 %}
+                    {% if day == 1 %}
+                    <svg class="one">
+                        <circle  cx="7.5" cy="7.5" r="7.5"/>
+                    </svg>
+                    {% elif day == 2 %}
+                    <svg class="two">
+                         <circle  cx="7.5" cy="7.5" r="7.5"/>
+                    </svg>
+                    {% elif day == 3 %}
+                    <svg class="three">
+                         <circle  cx="7.5" cy="7.5" r="7.5"/>
+                    </svg>
+                    {% elif day == 4 %}
+                    <svg class="four">
+                         <circle  cx="7.5" cy="7.5" r="7.5"/>
+                    </svg>
+                    {% elif day == 5 %}
+                    <svg class="five">
+                         <circle  cx="7.5" cy="7.5" r="7.5"/>
+                    </svg>
+                    {% elif day == 6 %}
+                    <svg class="six">
+                         <circle  cx="7.5" cy="7.5" r="7.5"/>
+                    </svg>
+                    {% elif day == 7 %}
+                    <svg class="seven">
+                         <circle  cx="7.5" cy="7.5" r="7.5"/>
+                    </svg>
+                    {% else %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+        <!-- 하트 -->
+        <div class="palette" id="heart_div" style="display: none;">
+            {% for p1 in palette %}
+            <div class="in_palette">
+                {% for day in p1 %}
+                    {% if day == 1 %}
+                    <svg class="one">
+                        <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
+                        C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z" />
+                    </svg>
+                    {% elif day == 2 %}
+                    <svg class="two">
+                        <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
+                        C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z" />
+                    </svg>
+                    {% elif day == 3 %}
+                    <svg class="three">
+                        <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
+                        C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z" />
+                    </svg>
+                    {% elif day == 4 %}
+                    <svg class="four">
+                        <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
+                        C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z" />
+                    </svg>
+                    {% elif day == 5 %}
+                    <svg class="five">
+                        <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
+                        C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z" />
+                    </svg>
+                    {% elif day == 6 %}
+                    <svg class="six">
+                        <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
+                        C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z" />
+                    </svg>
+                    {% elif day == 7 %}
+                    <svg class="seven">
+                        <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
+                        C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z" />
+                    </svg>
+                    {% else %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+        <!-- 동물 -->
+        <div class="palette" id="animal_div" style="display: none;">
+            {% for p1 in palette %}
+            <div class="in_palette">
+                {% for day in p1 %}
+                    {% if day == 1 %}
+                    <img src="{% static 'image/animal_angry.svg' %}" alt="" width="16">
+                    {% elif day == 2 %}
+                    <img src="{% static 'image/animal_fear.svg' %}" alt="" width="16">
+                    {% elif day == 3 %}
+                    <img src="{% static 'image/animal_joy.svg' %}" alt="" width="16">
+                    {% elif day == 4 %}
+                    <img src="{% static 'image/animal_love.svg' %}" alt="" width="16">
+                    {% elif day == 5 %}
+                    <img src="{% static 'image/animal_neutral.svg' %}" alt="" width="16">
+                    {% elif day == 6 %}
+                    <img src="{% static 'image/animal_sad.svg' %}" alt="" width="16">
+                    {% elif day == 7 %}
+                    <img src="{% static 'image/animal_surprise.svg' %}" alt="" width="16">
+                    {% else %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- 여기까지 팔레트 -->
+    <div class="content">
+        <h2>감정 분석 레포트</h2>
+        <div>
+            최근 30일 동안 가장 많이 들어난 감정은 {{percent}}% 에 해당하는 "{{emotion.emotion}}" 입니다. <br>
+            {{emotion.report}}<br>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>"{{emotion.emotion}}" 한 당신에게 추천</h2>
+        <div>
+            요즘 "{{emotion.emotion}}" 한 당신에게 추천드릴 컨텐츠는?
+            <div>
+                <iframe width="300" height="150" src="{{ emotion.recommendation }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <a href="{% url 'home' %}">처음으로></a>
+</div>
+<script>
+    function changeTemplate(){
+        if($('input:radio[id=square]').is(':checked')){
+            $('#square_div').show();
+            $('#circle_div').hide();
+            $('#heart_div').hide();
+            $('#animal_div').hide();
+            
+        }else if($('input:radio[id=circle]').is(':checked')){
+            $('#square_div').hide();
+            $('#circle_div').show();
+            $('#heart_div').hide();
+            $('#animal_div').hide();
+        }else if($('input:radio[id=heart]').is(':checked')){
+            $('#square_div').hide();
+            $('#circle_div').hide();
+            $('#heart_div').show();
+            $('#animal_div').hide();
+        }
+        else{
+            $('#square_div').hide();
+            $('#circle_div').hide();
+            $('#heart_div').hide();
+            $('#animal_div').show();
+        }
+    }
+</script>
+{% endblock %} 

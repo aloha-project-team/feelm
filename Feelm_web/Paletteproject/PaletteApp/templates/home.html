@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" type = "text/css" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>Palette 감정분석기</h1>
+    <div class="inbox">
+        <div class="intro">
+            sns 계정을 입력해주세요.<br>최근 30개의 게시물을 바탕으로 당신의 감정을 분석해드립니다.
+        </div>
+        <div>
+            <form action="{% url 'result' %}" method = "POST">
+                {% csrf_token %}
+                <input type="text" name="account" placeholder="@계정입력">
+                <button type="submit">분석하기</button>
+            </form>
+        </div>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" type = "text/css" href="{% static 'css/test.css' %}">
+{% endblock %}
+ 
+{% block content %}
+<h1>svg test</h1>
+
+<div class="palette" id="animal_div">
+    {% for p1 in palette %}
+    <div class="in_palette">
+        {% for day in p1 %}
+            {% if day == 1 %}
+            <img src="{% static 'image/animal_angry.svg' %}" alt="" width="16">
+            {% elif day == 2 %}
+            <img src="{% static 'image/animal_fear.svg' %}" alt="" width="16">
+            {% elif day == 3 %}
+            <img src="{% static 'image/animal_joy.svg' %}" alt="" width="16">
+            {% elif day == 4 %}
+            <img src="{% static 'image/animal_love.svg' %}" alt="" width="16">
+            {% elif day == 5 %}
+            <img src="{% static 'image/animal_neutral.svg' %}" alt="" width="16">
+            {% elif day == 6 %}
+            <img src="{% static 'image/animal_sad.svg' %}" alt="" width="16">
+            {% elif day == 7 %}
+            <img src="{% static 'image/animal_surprise.svg' %}" alt="" width="16">
+            {% else %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+
+<div class="palette" id="circle_div" style="display: none;">
+    {% for p1 in palette %}
+    <div class="hh">
+        {% for day in p1 %}
+            {% if day == 1 %}
+            <svg class="one">
+                <circle  cx="7.5" cy="7.5" r="7.5"/>
+            </svg>
+            {% elif day == 2 %}
+            <svg class="two">
+                 <circle  cx="7.5" cy="7.5" r="7.5"/>
+            </svg>
+            {% elif day == 3 %}
+            <svg class="three">
+                 <circle  cx="7.5" cy="7.5" r="7.5"/>
+            </svg>
+            {% elif day == 4 %}
+            <svg class="four">
+                 <circle  cx="7.5" cy="7.5" r="7.5"/>
+            </svg>
+            {% elif day == 5 %}
+            <svg class="five">
+                 <circle  cx="7.5" cy="7.5" r="7.5"/>
+            </svg>
+            {% else %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+
+<div class="palette" id="square_div">
+    {% for p1 in palette %}
+    <div class="hh">
+        {% for day in p1 %}
+            {% if day == 1 %}
+            <svg class="one">
+                <rect width="15" height="15">
+            </svg>
+            {% elif day == 2 %}
+            <svg class="two">
+                 <rect width="15" height="15">
+            </svg>
+            {% elif day == 3 %}
+            <svg class="three">
+                 <rect width="15" height="15">
+            </svg>
+            {% elif day == 4 %}
+            <svg class="four">
+                 <rect width="15" height="15">
+            </svg>
+            {% elif day == 5 %}
+            <svg class="five">
+                 <rect width="15" height="15">
+            </svg>
+            {% else %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+<img src="{% static 'image/icon_heart.svg' %}" alt="">
+
+
+{% endblock %}
