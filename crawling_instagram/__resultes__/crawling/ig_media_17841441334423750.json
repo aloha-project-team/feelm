@@ -1,5 +1,20 @@
 [
     {
+        "caption": "🌈#일정\n🔥9월 14일 개발일지🔥 \n\n# 오늘의 프로젝트 진행\n1. 벡엔드 개발 \n2. 감정 분류셋을 BERT 모델로 감정 학습시키기 \n3. 전반적인 서비스 디자인\n\n#오늘의 소감\n\n희국님께 받은 데이터셋을 참고해서 오후에 감정분류 모델을 완성시킬 수 있었다. 역시 사람은 협업해야.. 덜 피곤하다는걸 새삼 느낀다. 다만 결과가.. 좀 아쉽다 7개의 감정에 맞는 정답률이 48% 였다. 좋다고도 할 수 있지만 아쉬운건 어쩔 수 없는듯.. 학습레이어를 더 늘려주는것도 있지만 코랩에서 지원해주는 램의 한계로 에러가나 확인해보진 못했다.\n\n개발하고 남은 시간동안은 추천서비스를 어떻게 구현할지 생각해보았는데, 결과적으로 우리 서비스와 맞지않는것 같아 다른 주제를 정하게 되었다.\n남은 기간동안에는 데이터를 가지고 어떻게 새로운 인싸이트를 얻어낼지에 대해 생각해봐야한다. 🤔\n텍스트 감정 분류, SNS API로 끌어온 JSON파일의 글들.. 자고 일어났을 때 좋은 아이디어가 떠올랐으면 좋겠다~.\n\n#AI#광주인공지능사관학교#SNS_API#감정분류",
+        "comments_count": 0,
+        "id": "17890581982630301",
+        "like_count": 6,
+        "media_type": "IMAGE",
+        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/119224211_170461534652707_4223200560505629029_n.jpg?_nc_cat=100&_nc_sid=8ae9d6&_nc_ohc=h4A-qpFZvgMAX9z3ThC&_nc_ht=scontent.cdninstagram.com&oh=48cceac7446c96b2c56db1eb720644e6&oe=5F85EF79",
+        "owner": {
+            "id": "17841441334423750"
+        },
+        "permalink": "https://www.instagram.com/p/CFHoWo9hqGU/",
+        "shortcode": "CFHoWo9hqGU",
+        "timestamp": "2020-09-14 22:49:44",
+        "username": "aloha_ai_2020"
+    },
+    {
         "caption": ".\n🔥9월 13-14일 개발일지🔥 \n\n# 오늘의 프로젝트 진행\n1. Graph API instagram crawling\n2. 감정분석 모델 구축\n3. 웹 기본 설계 및 구현\n\n#오늘의 소감\n우리 팀의 팀훈(?) ❗️워라밸❗️을 위해 체계적으로 진행하려고 스크럼도 하고 그랬는데, 워라밸을 떠나서 매끄럽게 진행되고있다. 매우 행복하고 만족스럽다!\\(//∇//)\\\n\nSNS(페이스북, 인스타그램 등) 데이터 가져오는 것이 매우 걱정했는데 성공했다. 이게 행복이지. 이맛에 코딩하는건가?(°▽°)❗️ 짜릿해\n\n오늘 팀플의 기분은 행복함, 그리고 평화로움이다.\n오늘은 여기까지☀️\n\n#이렇게 #평화로워도되나몰라😘 #워라밸 #프로젝트 #최고야❤️ #짜릿해늘새로워 #근데왜때문에 #내일 #월요일 #월요일좋아 #🤪",
         "children": {
             "data": [
@@ -13,9 +28,9 @@
         },
         "comments_count": 0,
         "id": "17870925613914524",
-        "like_count": 7,
+        "like_count": 18,
         "media_type": "CAROUSEL_ALBUM",
-        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/119240219_3603809599650122_6816489202354461036_n.jpg?_nc_cat=106&_nc_sid=8ae9d6&_nc_ohc=-6wj78FqVWYAX_4brRd&_nc_ht=scontent.cdninstagram.com&oh=fc102ea711fe907726ee677b43a096e8&oe=5F842984",
+        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/119240219_3603809599650122_6816489202354461036_n.jpg?_nc_cat=106&_nc_sid=8ae9d6&_nc_ohc=-6wj78FqVWYAX_VHt-5&_nc_ht=scontent.cdninstagram.com&oh=3c87062510b97f3f4793cbae64246b6c&oe=5F842984",
         "owner": {
             "id": "17841441334423750"
         },
@@ -40,7 +55,7 @@
         "id": "17887395964715589",
         "like_count": 12,
         "media_type": "CAROUSEL_ALBUM",
-        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/119069460_325335865191150_1162502470366110902_n.jpg?_nc_cat=110&_nc_sid=8ae9d6&_nc_ohc=38zZTtCIOKMAX_DE7tX&_nc_ht=scontent.cdninstagram.com&oh=ffb1807305e19d8c4b76ab21cbb4a0aa&oe=5F82EFF1",
+        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/119069460_325335865191150_1162502470366110902_n.jpg?_nc_cat=110&_nc_sid=8ae9d6&_nc_ohc=38zZTtCIOKMAX_Q0o9c&_nc_ht=scontent.cdninstagram.com&oh=443c5ee719aec26c3355981d9747efee&oe=5F86E471",
         "owner": {
             "id": "17841441334423750"
         },
@@ -65,7 +80,7 @@
         "id": "18108355840167350",
         "like_count": 10,
         "media_type": "CAROUSEL_ALBUM",
-        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/119010070_773623030125976_119690380812669076_n.jpg?_nc_cat=110&_nc_sid=8ae9d6&_nc_ohc=HI0z6Umz8N4AX9Vb980&_nc_ht=scontent.cdninstagram.com&oh=dac874a1c5d7dbeda7ccb022d4da09f4&oe=5F82D31F",
+        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/119010070_773623030125976_119690380812669076_n.jpg?_nc_cat=110&_nc_sid=8ae9d6&_nc_ohc=IzsbWEqYrfcAX9ZKTjc&_nc_ht=scontent.cdninstagram.com&oh=ccb3abc49b55486c9e0832e5e953897f&oe=5F86C79F",
         "owner": {
             "id": "17841441334423750"
         },
@@ -90,7 +105,7 @@
         "id": "17857001525146944",
         "like_count": 14,
         "media_type": "CAROUSEL_ALBUM",
-        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/119044240_446107162974905_1248551605189483726_n.jpg?_nc_cat=103&_nc_sid=8ae9d6&_nc_ohc=-wFTWE2VZbMAX-B3rxI&_nc_ht=scontent.cdninstagram.com&oh=dc383cc6c5f2d1b38e292c8af0b63912&oe=5F847AC0",
+        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/119044240_446107162974905_1248551605189483726_n.jpg?_nc_cat=103&_nc_sid=8ae9d6&_nc_ohc=-wFTWE2VZbMAX8-qpDo&_nc_ht=scontent.cdninstagram.com&oh=6c0a125033aebe7c0fb6e0e984c99049&oe=5F847AC0",
         "owner": {
             "id": "17841441334423750"
         },
@@ -115,7 +130,7 @@
         "id": "17881909543764377",
         "like_count": 14,
         "media_type": "CAROUSEL_ALBUM",
-        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/118878084_168023718195555_2085347662266842791_n.jpg?_nc_cat=111&_nc_sid=8ae9d6&_nc_ohc=6_FOiOqADiMAX8FyzUz&_nc_ht=scontent.cdninstagram.com&oh=b14a36684947d7ea1b38a62d557d9b61&oe=5F82768C",
+        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/118878084_168023718195555_2085347662266842791_n.jpg?_nc_cat=111&_nc_sid=8ae9d6&_nc_ohc=6_FOiOqADiMAX9i68O8&_nc_ht=scontent.cdninstagram.com&oh=47f3c5d3bfadb9390e1d9ea371590180&oe=5F866B0C",
         "owner": {
             "id": "17841441334423750"
         },
@@ -149,7 +164,7 @@
         "id": "17933685622406629",
         "like_count": 20,
         "media_type": "CAROUSEL_ALBUM",
-        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/118806562_240929107233165_1255018168387947516_n.jpg?_nc_cat=105&_nc_sid=8ae9d6&_nc_ohc=l3k8kt7qhwcAX-qbzmD&_nc_ht=scontent.cdninstagram.com&oh=78e36d745859e18736bb3a88e6f6aa35&oe=5F82C345",
+        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/118806562_240929107233165_1255018168387947516_n.jpg?_nc_cat=105&_nc_sid=8ae9d6&_nc_ohc=t3m5CQ0eJKIAX9ogKQq&_nc_ht=scontent.cdninstagram.com&oh=e232a53b7f309268c1801bb5b217a20d&oe=5F86B7C5",
         "owner": {
             "id": "17841441334423750"
         },
@@ -186,7 +201,7 @@
         "id": "17867914042989841",
         "like_count": 16,
         "media_type": "CAROUSEL_ALBUM",
-        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/118831752_672768623446754_2456892562485862155_n.jpg?_nc_cat=100&_nc_sid=8ae9d6&_nc_ohc=oLhKEcuS6X0AX-p_gwI&_nc_ht=scontent.cdninstagram.com&oh=441b7d2b5106357bc061b7cad87d7bd3&oe=5F840E50",
+        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/118831752_672768623446754_2456892562485862155_n.jpg?_nc_cat=100&_nc_sid=8ae9d6&_nc_ohc=oLhKEcuS6X0AX8qXQSP&_nc_ht=scontent.cdninstagram.com&oh=8ed634118f2a5d8679b3f6bd293bf4a3&oe=5F840E50",
         "owner": {
             "id": "17841441334423750"
         },
@@ -220,7 +235,7 @@
         "id": "17869321219970776",
         "like_count": 21,
         "media_type": "CAROUSEL_ALBUM",
-        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/118767744_381377806183847_468703913150776559_n.jpg?_nc_cat=100&_nc_sid=8ae9d6&_nc_ohc=cLZd6CncjM8AX9yiMb2&_nc_ht=scontent.cdninstagram.com&oh=767bd2a1c55dc10e00cb4b6f45abf3bb&oe=5F823C59",
+        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/118767744_381377806183847_468703913150776559_n.jpg?_nc_cat=100&_nc_sid=8ae9d6&_nc_ohc=cLZd6CncjM8AX8vhbOE&_nc_ht=scontent.cdninstagram.com&oh=dc8476bc20acab08daf74ec0ca8aa9df&oe=5F8630D9",
         "owner": {
             "id": "17841441334423750"
         },
@@ -259,7 +274,7 @@
         "id": "17874218794880569",
         "like_count": 33,
         "media_type": "CAROUSEL_ALBUM",
-        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/118664437_195547961991995_1789709771069607694_n.jpg?_nc_cat=110&_nc_sid=8ae9d6&_nc_ohc=SWOKQkhjOUYAX-s_7ac&_nc_ht=scontent.cdninstagram.com&oh=305b7295fce78ba33f3945bef1a61532&oe=5F850756",
+        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/118664437_195547961991995_1789709771069607694_n.jpg?_nc_cat=110&_nc_sid=8ae9d6&_nc_ohc=SWOKQkhjOUYAX_yMiiH&_nc_ht=scontent.cdninstagram.com&oh=2a93a5ca3e5d7756526450fdb0334c0a&oe=5F850756",
         "owner": {
             "id": "17841441334423750"
         },
@@ -293,7 +308,7 @@
         "id": "17950516543364932",
         "like_count": 19,
         "media_type": "CAROUSEL_ALBUM",
-        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/118681127_239768357302214_3936638672934098646_n.jpg?_nc_cat=106&_nc_sid=8ae9d6&_nc_ohc=Ts4ZejS3X48AX-T-Jvy&_nc_ht=scontent.cdninstagram.com&oh=fd7da1109da10d8c754027612db6150d&oe=5F81FB3B",
+        "media_url": "https://scontent.cdninstagram.com/v/t51.29350-15/118681127_239768357302214_3936638672934098646_n.jpg?_nc_cat=106&_nc_sid=8ae9d6&_nc_ohc=sc_UiqIS5YwAX9Fil5k&_nc_ht=scontent.cdninstagram.com&oh=1a21e1fc7242d01edb1e297bbcef73eb&oe=5F85EFBB",
         "owner": {
             "id": "17841441334423750"
         },

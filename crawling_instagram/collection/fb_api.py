@@ -2,7 +2,7 @@ from urllib.parse import urlencode
 from collection import json_request as jr
 
 BASE_URL_FB_API = 'https://graph.facebook.com/v8.0'
-ACCESS_TOKEN = 'generate token'
+ACCESS_TOKEN = 'access token'
 
 # 여러 파라미터에 대하여, url을 생성
 def fb_generate_url(base = BASE_URL_FB_API, node = '', **param):
