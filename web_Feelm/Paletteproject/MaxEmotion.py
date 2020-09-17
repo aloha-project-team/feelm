@@ -1,4 +1,27 @@
 import numpy as np
+from eemotion import emotionR
+
+def emotion_30(text_list):
+    emotion_list1 = []
+    emotion_list2 = []
+    emotion_list3 = []
+    emotion_list4 = []
+    emotion_list5 = []
+    
+    for idx in range(0, 30):
+        if idx>=0 and idx<6:
+            emotion_list1.append(emotionR(text_list[idx]))
+        if idx>=6 and idx<12:
+            emotion_list2.append(emotionR(text_list[idx]))
+        if idx>=12 and idx<18:
+            emotion_list3.append(emotionR(text_list[idx]))
+        if idx>=18 and idx<24:
+            emotion_list4.append(emotionR(text_list[idx]))
+        if idx>=24 and idx<30:
+            emotion_list5.append(emotionR(text_list[idx]))
+
+    emotion_list=[emotion_list1, emotion_list2, emotion_list3, emotion_list4, emotion_list5]
+    return emotion_list
 
 def Max_Emotion(emotion_list):
     newlist = np.array(emotion_list).flatten().tolist()

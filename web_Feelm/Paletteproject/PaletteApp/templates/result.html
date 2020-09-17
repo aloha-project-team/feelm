@@ -28,7 +28,25 @@
                 <input type="radio" name="template" id='circle' onclick="changeTemplate()" />동그라미<br>
                 <input type="radio" name="template" id='heart' onclick="changeTemplate()" />하트<br>
                 <input type="radio" name="template" id='animal' onclick="changeTemplate()" />동물<br>
-            </div> 
+            </div>
+            <div id="color_option">
+                <svg><rect width="15" height="15" style = "fill:pink;"></svg> anger
+                <svg><rect width="15" height="15" style = "fill:#FAAC58;"></svg> fear
+                <svg><rect width="15" height="15" style = "fill:yellow;"></svg> joy
+                <svg><rect width="15" height="15" style = "fill:yellowgreen;"></svg> love <br>
+                <svg><rect width="15" height="15" style = "fill:skyblue;"></svg> neutral
+                <svg><rect width="15" height="15" style = "fill:#E3A6FC;"></svg> sadness
+                <svg><rect width="15" height="15" style = "fill:#BDBDBD;"></svg> surprise
+            </div>
+            <div id="animal_option" style="display: none;">
+                <img src="{% static 'image/animal_angry.svg' %}" alt="" width="16">anger
+                <img src="{% static 'image/animal_fear.svg' %}" alt="" width="16">fear
+                <img src="{% static 'image/animal_joy.svg' %}" alt="" width="16">joy
+                <img src="{% static 'image/animal_love.svg' %}" alt="" width="16">love <br>
+                <img src="{% static 'image/animal_neutral.svg' %}" alt="" width="16">neutral
+                <img src="{% static 'image/animal_sad.svg' %}" alt="" width="16">sadness
+                <img src="{% static 'image/animal_surprise.svg' %}" alt="" width="16">surprise
+            </div>
         </div>
         <!-- 네모 -->
         <div class="palette" id="square_div">
@@ -207,23 +225,33 @@
             $('#circle_div').hide();
             $('#heart_div').hide();
             $('#animal_div').hide();
-            
+
+            $('#color_option').show();
+            $('#animal_option').hide();
         }else if($('input:radio[id=circle]').is(':checked')){
             $('#square_div').hide();
             $('#circle_div').show();
             $('#heart_div').hide();
             $('#animal_div').hide();
+
+            $('#color_option').show();
+            $('#animal_option').hide();
         }else if($('input:radio[id=heart]').is(':checked')){
             $('#square_div').hide();
             $('#circle_div').hide();
             $('#heart_div').show();
             $('#animal_div').hide();
-        }
-        else{
+
+            $('#color_option').show();
+            $('#animal_option').hide();
+        }else{
             $('#square_div').hide();
             $('#circle_div').hide();
             $('#heart_div').hide();
             $('#animal_div').show();
+
+            $('#color_option').hide();
+            $('#animal_option').show();
         }
     }
 </script>
