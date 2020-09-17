@@ -1,18 +1,130 @@
+/* rainbow title */
+div.title{
+    font-family: InkLipquid;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+#red{
+    color:rgb(249, 81, 74);
+}
+#orange{
+    color:rgb(255, 192, 0);
+}
+#yellow{
+    color:rgb(255, 239, 29);
+}
+#greenyellow{
+    color:rgb(0, 204, 92);
+}
+#green{
+    color:rgb(24, 119, 242);
+}
+#blue{
+    color:rgb(0, 65, 196);
+}
+#purple{
+    color:rgb(191, 87, 255);
+}
+
+/* content root */
+.content{
+    width: 100%;
+    background-color: rgb(250, 246, 245);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* content 1 profile */
+#user_profile{
+    height: 150px;
+}
+
+/* content 2 palette */
+#emotion_palette{
+    height: 230px;
+}
 div.palette{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.check{
+
+.palette_option{
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+.radio{
+    /* border: solid 1px rgb(249, 81, 74); */
+    /* border-radius: 10px; */
+    display: flex;
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    height: 20px;
+    margin: 5px;
+    align-self: center;
+    font-weight: 100;
+    color: gray;
+}
+input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    /* font-weight: 500; */
+    width: 25%;
+    text-align: center;
+    /* padding: 5px 20px; */
+}
+
+input[type=radio]:checked + label{
+    color: white;
+    font-weight: 500;
+    background: rgb(255, 169, 148);
+    border-radius: 10px;
+}
+  
+/* label + input[type=radio] + label {
+    border-left: solid 1px rgb(249, 81, 74);
+} */
+
+/* radio end */
+
+.row_container{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: 100%;
+}
+
+.note_option{
+    display: flex;
+    flex-flow: column;
+    width: 30%;
+    height: 40px;
+    font-size: 10px;
+    padding-left: 10px;
+}
+
+.note_option div{
+    display: flex;
+    flex-flow: row;
+}
+
 div.in_palette{
     width: 120px;
     height: 16px;
     display: flex;
     justify-content: center;
-    background-color: slategray;
+    background-color: rgb(235, 235, 235);
 }
+
 svg{
     width: 16px;
     height: 16px;
@@ -30,8 +142,4 @@ div.content{
     display: flex;
     flex-direction: column;
     align-content: center;
-}
-.head_option{
-    display: flex;
-    flex-direction: column;
 }
