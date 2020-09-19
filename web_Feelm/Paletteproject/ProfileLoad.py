@@ -1,18 +1,23 @@
 import json
 
-def InstaProfile():
+def InstaProfile(user_id):
     #파일이름 ig_info_id
-    file_dir=".\__resultes__\crawling\ig_info_17841441334423750.json"
+    file_dir=f"./resultes/ig_info_"+str(user_id)+".json"
     with open(file_dir) as json_file:
         json_data = json.load(json_file)
 
-    follow = json_data["follows_count"]
-    follower = json_data["followers_count"]
-    introduce = json_data["biography"]
-    img_url = json_data["profile_picture_url"]
-    profile_name = json_data["name"]
-
-    return follow, follower, img_url, profile_name, introduce
+    # follow = json_data["follows_count"]
+    # follower = json_data["followers_count"]
+    # introduce = json_data["biography"]
+    # img_url = json_data["profile_picture_url"]
+    # profile_name = json_data["name"]
+    # return follow, follower, img_url, profile_name, introduce
+    
+    media_count = json_data['media_count']
+    username = json_data['username']
+    # "media_count": 15,
+    # "username": "aloha_ai_2020"
+    return media_count, username
 
 def InstaText():
     #json 파일 읽어오는 걸로 바꿔주기

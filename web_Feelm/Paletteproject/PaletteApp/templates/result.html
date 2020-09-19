@@ -14,17 +14,19 @@
     User Profile <br>
     {% if info.is_exist %}
     <div class="profile_box">
-        <img src="{{ info.img_url }}" alt="프로필이미지" width="100px" height="100px"><br>
+        <!-- <img src="{{ info.img_url }}" alt="프로필이미지" width="100px" height="100px"><br> -->
         <div>
-            ID : {{ info.account }}<br>
+            <!-- ID : {{ info.account }}<br>
             name: {{ info.profile_name }} <br>
             follow : {{ info.follow }} <br>
             follower : {{ info.follower }}<br>
-            introduce : {{ info.introduce }}
+            introduce : {{ info.introduce }} -->
+            name : {{info.username}}<br>
+            media count : {{info.media_count}}
         </div>
     </div>
     {% else %}
-        ID : None
+        ID : None (로그인 되지 않음)
     {% endif %}
 </div>
 <!-- content 2 emotion palette -->
