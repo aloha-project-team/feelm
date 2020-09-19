@@ -17,7 +17,7 @@ if os.path.exists(RESULT_DIRECTORY) is False:
     os.makedirs(RESULT_DIRECTORY)
 
 # 0.
-Authorization_Code='AQDe7fNMRbzv2872NWOra7uBnORtRi-C86JtCPKhiGNciZ4NURSH34XpSM6JxVR3koSdaB7JmtmRU07BoN7nQMiqm76sLgPix1_7MbqJljoW0hakDdGf63VJmSKIWygTcAt3CchaRh2vJpoPFedQQFLQ6ZTNMbyANBYsjbdZYP_KU6IuA-j2rr_2BcDfvqQ8En1tlmaefKueTseJeuwf7wYjrtajvlsoUmgumMewyKzJaw'
+Authorization_Code='insert code'
 
 
 # 1. Authorization_Code 로 Access_Token과 instagram_id를 받는다
@@ -92,12 +92,10 @@ if __name__ == '__main__':
     until=until.strftime("%Y-%m-%d")
 
     json_result=code_to_token(Authorization_Code)
-    # json_result={'access_token': 'IGQVJYXzVUZAEVfalBDdkxZAYWdxcV9VMjlBVjJBTmx2ZADd1VGFKdEo0TFBqVHdzZAmN3V1JveGs5eXhCb1JEQ2ctck5LRWlQTzhqczQzUEpQXzRtSkxZAYTNNOWlHRThJdS1GNnlSWldRTjYxUzVxcTk1YjRsOEwzRUtGRWhB', 'user_id': 17841441334423750}
     user_id=json_result['user_id']
     access_token=json_result['access_token']
     print('ACCESS_TOKEN : '+access_token+'\n')
     
-    # print("ACCESS_TOKEN : "+access_token)
     ig_media_list(user_id, access_token, since, until)
 
     #file name
