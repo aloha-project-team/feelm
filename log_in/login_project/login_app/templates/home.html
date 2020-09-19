@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>{{IG_URL}}</span>
+    <form onclick="return popup_post_set()" method="post" action="https://api.instagram.com/oauth/authorize?client_id=783139315754863&redirect_uri=https://127.0.0.1:8000/result/&scope=user_profile,user_posts,instagram_basic&response_type=code
+" target="new_popup">
+        {% csrf_token %}
+        <button type="submit">분석하기</button>
+    </form>
+</body>
+</html>
