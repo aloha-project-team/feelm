@@ -38,7 +38,10 @@ div.title{
 
 /* content 1 profile */
 #user_profile{
-    height: 150px;
+    /* height: 150px; */
+}
+.profile_box{
+    display: flex;
 }
 
 /* content 2 palette */
@@ -136,7 +139,7 @@ svg{
 .four{fill:yellowgreen;}
 .five{fill:skyblue;}
 .six{fill:#E3A6FC;}
-.seven{fill:#BDBDBD; }
+/* .seven{fill:#BDBDBD; } */
 
 div.content{
     display: flex;

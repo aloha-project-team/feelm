@@ -8,4 +8,4 @@ class Report(models.Model):
     recommendation = models.TextField()
 
     def __str__(self):
-        return f'{self.emotion}'
+        return f'{self.id} : {self.emotion}'
