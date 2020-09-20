@@ -287,12 +287,29 @@
 <div class="content">
     <h2>당신에게 추천</h2>
     <div>
-        요즘 "{{emotion.first.emotion}} {{emotion.second.emotion}} {{emotion.third.emotion}}" 한 당신에게 추천드릴 컨텐츠?
+        요즘 "{{emotion.first.emotion}} {{emotion.second.emotion}} {{emotion.third.emotion}}" 한 당신에게 추천하는 노래 들어보세요.
         <div>
-            <iframe width="300" height="150" src="{{ emotion.first.recommendation }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="300" height="150" src="{{ emotion.second.recommendation }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {{emotion.first.emotion}}: <br>
+            <iframe width="300" height="150" src="{{ emotion.first.recommendation }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+            {{emotion.second.emotion}}: <br>
+            <iframe width="300" height="150" src="{{ emotion.second.recommendation }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+            {{emotion.third.emotion}}: <br>
             <iframe width="300" height="150" src="{{ emotion.third.recommendation }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <br>
+        <I><span id="youtubeshow" onclick="youtubeMore()">추천 음악 더 듣기</span></I>
+        <div id="moreyoutube" style="display: none;">
+            {{emotion.first.emotion}}: <br>
+            <iframe width="300" height="150" src="{{ emotion.first.recommendation2 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="150" src="{{ emotion.first.recommendation3 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+            {{emotion.second.emotion}}: <br>
+            <iframe width="300" height="150" src="{{ emotion.second.recommendation2 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="150" src="{{ emotion.second.recommendation3 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+            {{emotion.third.emotion}}: <br>
+            <iframe width="300" height="150" src="{{ emotion.third.recommendation2 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="150" src="{{ emotion.third.recommendation3 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <br>
     </div>
 </div>
 <a href="{% url 'home' %}">처음으로></a>

@@ -41,13 +41,13 @@ def result(request):
     }
     ### 감정팔레트 표시하기
 
-    palette1 = [4, 2, 3, 6, 5, 1]
-    palette2 = [2, 2, 2, 5, 4, 2]
-    palette3 = [1, 1, 5, 5, 2, 3]
-    palette4 = [5, 6, 2, 1, 3, 4]
-    palette5 = [1, 2, 3, 2, 4, 5]
-    palette = [palette1, palette2, palette3, palette4, palette5]
-    # palette = emotion_30( InstaText() )
+    # palette1 = [4, 2, 3, 6, 5, 1]
+    # palette2 = [2, 2, 2, 5, 4, 2]
+    # palette3 = [1, 1, 5, 5, 2, 3]
+    # palette4 = [5, 6, 2, 1, 3, 4]
+    # palette5 = [1, 2, 3, 2, 4, 5]
+    # palette = [palette1, palette2, palette3, palette4, palette5]
+    palette = emotion_30( InstaText(user_id) )
     context['palette'] = palette
     # 1:anger 2:fear 3:joy 4:love 5:neutral 6:sadness 7:surprise
     maxemotion, percent = Max_Emotion(palette)

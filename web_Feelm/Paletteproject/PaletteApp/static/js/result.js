@@ -61,3 +61,13 @@ function fnMore3(){
         show3.innerText='더보기...';
     }
 }
+
+function youtubeMore(){
+    if(moreyoutube.style.display=='none'){
+        $('#moreyoutube').show();
+        youtubeshow.innerText='추천 음악 접기';
+    }else{
+        $('#moreyoutube').hide();
+        youtubeshow.innerText='추천 음악 더 듣기';
+    }
+}
