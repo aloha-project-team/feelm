@@ -9,14 +9,15 @@ import time
 driver = webdriver.Chrome('C:/Users/husky/Documents/워밍업/code/feelm/crawling_taglive/chromedriver')
 driver.implicitly_wait(5)
 
-with open('happiness2_music_list.csv', 'w', newline='', encoding='utf-8') as csvfile:
+with open('sed_music_list.csv', 'w', newline='', encoding='utf-8') as csvfile:
     csvwriter=csv.writer(csvfile)
     csvwriter.writerow(['music', 'singer'])
 
 tag = "우울"
 
-for idx in range(1, 400, 50):
-    URL=f'https://www.melon.com/mymusic/dj/mymusicdjplaylistview_inform.htm?plylstSeq=476035128#params%5BplylstSeq%5D=429411613&po=pageObj&startIndex={idx}'
+idx=0 # 칼럼명 만들기
+for idx in range(1, 100, 50):
+    URL=f'https://www.melon.com/mymusic/dj/mymusicdjplaylistview_inform.htm?plylstSeq=463212234#params%5BplylstSeq%5D=463212234&po=pageObj&startIndex={idx}'
     driver.get(URL)
     time.sleep(3)
     print('driver get request [URL : '+URL+']')
@@ -30,8 +31,11 @@ for idx in range(1, 400, 50):
         
         # print(music)
 
-        with open('joy_music_list.csv', 'a', newline='', encoding='utf-8') as csvfile:
+        with open('sed_music_list.csv', 'a', newline='', encoding='utf-8') as csvfile:
             csvwriter=csv.writer(csvfile)
+            # if(idx==0):
+            #     csvwriter.writerow(['music', 'singer'])
             csvwriter.writerow([music, singer])
+            idx+=1
 
 driver.quit()
