@@ -17,40 +17,35 @@ def home(request):
     return render(request, 'home.html', context)
 
 def result(request):
-    code=request.GET.get('code')
+    context={}
+    #로그인된 사용자의 code를 가져온다.
+    code = request.GET.get('code')
     if code :
         is_exist = True
     else:
         is_exist = False
-
+    #사용자의 인스타그램 정보들을 크롤링한뒤 저장된 파일을 찾기위한 user_id값을 반환한다.
     user_id = crawling_insta(code)
-    context={}
-    ### 프로필 가져오기
-    # follow, follower, img_url, profile_name ,introduce= InstaProfile(user_id)
+    # user_id값을 통해 사용자의 basic_info중 게시물 수 와 이름을 가져온다.
     media_count, username= InstaProfile(user_id)
     
     context['info']={
         'is_exist':is_exist,
-        # 'follow': follow,
-        # 'follower' : follower,
-        # 'introduce':introduce,
-        # 'img_url':img_url,
-        # 'profile_name':profile_name,
         'media_count': media_count,
         'username':username,
     }
-    ### 감정팔레트 표시하기
-
-    # palette1 = [4, 2, 3, 6, 5, 1]
-    # palette2 = [2, 2, 2, 5, 4, 2]
-    # palette3 = [1, 1, 5, 5, 2, 3]
-    # palette4 = [5, 6, 2, 1, 3, 4]
-    # palette5 = [1, 2, 3, 2, 4, 5]
-    # palette = [palette1, palette2, palette3, palette4, palette5]
-    palette = emotion_30( InstaText(user_id) )
+    # instaText(user_id)를 통해 저장된 게시물텍스트를 불러오고
+    # emotion_30을 통해 bert모델을 통과시킨 감정리스트 값을 가져온다. 
+    # [게시물1, 게시물2, ..., 게시물30] > [1, 3, 4, 5, ..., 2]
+    # 1:anger 2:fear 3:joy 4:love 5:sadness 6:surprise
+    palette = emotion_30( InstaText(user_id) ) 
     context['palette'] = palette
-    # 1:anger 2:fear 3:joy 4:love 5:neutral 6:sadness 7:surprise
+
+    # Max_emotion함수를 통해 가장많이 나온 상위 3개 감정과 비율을 받아온다
+    # [1(anger), 3(joy), 5(sadness)], [23.33, 23.33, 3.33]
     maxemotion, percent = Max_Emotion(palette)
+
+    # 해당 감정에 해당하는 report객체를 가져온다.
     emotion=[]
     for p in maxemotion:
             emotion.append(Report.objects.get(pk=p))
