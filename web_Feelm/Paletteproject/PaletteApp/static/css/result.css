@@ -4,9 +4,9 @@ div.title{
     font-size: 20px;
     display: flex;
     justify-content: center;
-    margin: 10px;
+    margin-bottom: 10px;
 }
-#red{
+/* #red{
     color:rgb(249, 81, 74);
 }
 #orange{
@@ -26,19 +26,51 @@ div.title{
 }
 #purple{
     color:rgb(191, 87, 255);
+} */
+#c1{
+    color:rgb(254, 104, 134);
+}
+#c2{
+    color:rgb(254, 141, 123);
+}
+#c3{
+    color:rgb(255, 182, 141);
+}
+#c4{
+    color:rgb(199, 218, 199);
+}
+#c5{
+    color:rgb(149, 211, 210);
+}
+#c6{
+    color:rgb(85, 204, 212);
+}
+#c7{
+    color:rgb(209, 137, 253);
+}
+body{
+    background-image: url(../image/background4.png);
+    background-size : cover;
+	background-repeat: no-repeat;
 }
 
 /* content root */
 .content{
-    width: 100%;
-    background-color: rgb(250, 246, 245);
+    width: 90%;
+    background-color: rgba(255, 255, 255, .8);
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    justify-content: center;
 }
 
 /* content 1 profile */
 #user_profile{
     /* height: 150px; */
+    height: 70px;
+    background: linear-gradient(to right, rgb(254, 104, 134),rgb(254, 141, 123) );
+    color: white;
+    opacity: 0.8;
 }
 .profile_box{
     display: flex;
@@ -46,7 +78,7 @@ div.title{
 
 /* content 2 palette */
 #emotion_palette{
-    height: 230px;
+    height: 220px;
 }
 div.palette{
     display: flex;
@@ -58,6 +90,7 @@ div.palette{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 15px;
 }
 .radio{
     /* border: solid 1px rgb(249, 81, 74); */
@@ -89,7 +122,7 @@ label {
 input[type=radio]:checked + label{
     color: white;
     font-weight: 500;
-    background: rgb(255, 169, 148);
+    background: rgb(254, 104, 134);
     border-radius: 10px;
 }
   
@@ -115,34 +148,78 @@ input[type=radio]:checked + label{
     padding-left: 10px;
 }
 
+#option_intro{
+    margin-top: 15px;
+}
+
 .note_option div{
     display: flex;
     flex-flow: row;
 }
 
 div.in_palette{
-    width: 120px;
-    height: 16px;
+    width: 180px;
+    height: 20px;
     display: flex;
     justify-content: center;
-    background-color: rgb(235, 235, 235);
+    /* background-color: rgb(235, 235, 235); */
+    margin-left: 10px;
 }
 
+#week{
+    line-height: 20px;
+}
+
+#svg_side{
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    /* margin:1px */
+}
 svg{
-    width: 16px;
-    height: 16px;
+    width: 17px;
+    height: 17px;
+    margin:1px
 }
 
-.one{fill:pink;}
+.one{fill:rgb(254, 104, 134);}
+.two{fill:rgb(254, 141, 123);}
+.three{fill:rgb(255, 182, 141);}
+.four{fill:rgb(199, 218, 199);}
+.five{fill:rgb(149, 211, 210);}
+.six{fill:rgb(85, 204, 212);}
+/* .one{fill:pink;}
 .two{fill:#FAAC58;}
 .three{fill:yellow;}
 .four{fill:yellowgreen;}
 .five{fill:skyblue;}
-.six{fill:#E3A6FC;}
+.six{fill:#E3A6FC;} */
 /* .seven{fill:#BDBDBD; } */
 
 div.content{
     display: flex;
     flex-direction: column;
     align-content: center;
+}
+
+iframe{
+    margin: 10px
+}
+
+#back{
+    margin: auto;
+    padding: 8px 30px;
+    display: block;
+    background-color: rgb(254, 104, 134);
+    /* box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1); */
+    color: #FFF;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    /* opacity: 0.5; */
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .3s;
 }

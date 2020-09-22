@@ -11,7 +11,9 @@
 
 <!-- content 1 user_profile -->
 <div class='content' id='user_profile'>
-    User Profile <br>
+    <div class='title'>
+        User Profile
+    </div>
     {% if info.is_exist %}
     <div class="profile_box">
         <!-- <img src="{{ info.img_url }}" alt="프로필이미지" width="100px" height="100px"><br> -->
@@ -34,17 +36,17 @@
     <!--rainbow title-->
     <div class='title'>
         <div>Emotion_</div>
-        <div id='red'>P</div>
-        <div id='orange'>a</div>
-        <div id='yellow'>l</div>
-        <div id='greenyellow'>e</div>
-        <div id='green'>t</div>
-        <div id='blue'>t</div>
-        <div id='purple'>e</div>
+        <div id='c1'>P</div>
+        <div id='c2'>a</div>
+        <div id='c3'>l</div>
+        <div id='c4'>e</div>
+        <div id='c5'>t</div>
+        <div id='c6'>t</div>
+        <div id='c7'>e</div>
     </div>
     <!--palette option-->
     <div class='palette_option'>
-        <div>원하는 모양의 팔레트를 선택해보세요</div>
+        <div id='option_intro'>원하는 모양의 팔레트를 선택해보세요</div>
         <div class="radio">
             <input type="radio" name="template" id='square' class="more" onclick="changeTemplate()" checked/>
             <label for="square">square</label>
@@ -60,27 +62,27 @@
     <div class='row_container'>
         <div class='note_option' id="color_option">
             <div>
-                <svg><rect width="13" height="13" style = "fill:pink;"></svg>
+                <svg class='one' id='svg_side'><rect width="13" height="13"></svg>
                 <span>anger</span>
             </div>
             <div>
-                <svg><rect width="13" height="13" style = "fill:#FAAC58;"></svg> 
+                <svg class='two' id='svg_side'><rect width="13" height="13"></svg> 
                 <span>fear</span>
             </div>
             <div>
-                <svg><rect width="13" height="13" style = "fill:yellow;"></svg> 
+                <svg class='three' id='svg_side'><rect width="13" height="13"></svg> 
                 <span>joy</span>
             </div>
             <div>
-                <svg><rect width="13" height="13" style = "fill:yellowgreen;"></svg>
+                <svg class='four' id='svg_side'><rect width="13" height="13"></svg>
                 <span>love</span>
             </div>
             <div>
-                <svg><rect width="13" height="13" style = "fill:skyblue;"></svg> 
+                <svg class='five' id='svg_side'><rect width="13" height="13"></svg> 
                 <span>sadness</span>
             </div>
             <div>
-                <svg><rect width="13" height="13" style = "fill:#E3A6FC;"></svg> 
+                <svg class='six' id='svg_side'><rect width="13" height="13"></svg> 
                 <span>surprise</span>
             </div>
         </div>
@@ -111,8 +113,8 @@
             </div>
         </div>
         <!-- note option end -->
-        <div class=row_container>
-            <span>
+        <div class='row_container'>
+            <span id='week'>
                 week 1<br>
                 week 2<br>
                 week 3<br>
@@ -126,27 +128,27 @@
                     {% for day in p1 %}
                         {% if day == 1 %}
                         <svg class="one">
-                            <rect width="15" height="15">
+                            <rect width="20" height="20">
                         </svg>
                         {% elif day == 2 %}
                         <svg class="two">
-                                <rect width="15" height="15">
+                                <rect width="20" height="20">
                         </svg>
                         {% elif day == 3 %}
                         <svg class="three">
-                                <rect width="15" height="15">
+                                <rect width="20" height="20">
                         </svg>
                         {% elif day == 4 %}
                         <svg class="four">
-                                <rect width="15" height="15">
+                                <rect width="20" height="20">
                         </svg>
                         {% elif day == 5 %}
                         <svg class="five">
-                                <rect width="15" height="15">
+                                <rect width="20" height="20">
                         </svg>
                         {% elif day == 6 %}
                         <svg class="six">
-                                <rect width="15" height="15">
+                                <rect width="20" height="20">
                         </svg>
                         {% else %}
                         {% endif %}
@@ -259,7 +261,15 @@
 <!-- content 1 palette end -->
 <!-- content 2 report -->
 <div class="content">
-    <div class='title'>감정 분석 Report</div>
+    <div class='title'>
+        <div>Emotion_</div>
+        <div id='c1'>R</div>
+        <div id='c2'>e</div>
+        <div id='c3'>p</div>
+        <div id='c4'>o</div>
+        <div id='c5'>r</div>
+        <div id='c6'>t</div>
+    </div>
     <div>
         최근 30일 동안 가장 많이 들어난 감정은 <b>{{percent.first}}%</b> 에 해당하는 <b>"{{emotion.first.emotion}}"</b> 입니다.<span id="firstReport" style="display: none;">
                 {{emotion.first.report}}
@@ -285,9 +295,20 @@
 </div>
 
 <div class="content">
-    <h2>당신에게 추천</h2>
+    <div class='title'>
+        <div>Emotion_</div>
+        <div id='c1'>C</div>
+        <div id='c2'>o</div>
+        <div id='c3'>n</div>
+        <div id='c4'>t</div>
+        <div id='c5'>e</div>
+        <div id='c6'>n</div>
+        <div id='c7'>t</div>
+    </div>
     <div>
-        요즘 "{{emotion.first.emotion}} {{emotion.second.emotion}} {{emotion.third.emotion}}" 한 당신에게 추천하는 노래 들어보세요.
+        Feelm 이 요즘 기분이 "{{emotion.first.emotion}} {{emotion.second.emotion}} {{emotion.third.emotion}}" 한 당신에게 추천하는 노래를 들어보세요.
+        <br>
+        <br>
         <div>
             {{emotion.first.emotion}}: <br>
             <iframe width="300" height="150" src="{{ emotion.first.recommendation }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
@@ -312,6 +333,7 @@
         <br>
     </div>
 </div>
-<a href="{% url 'home' %}">처음으로></a>
+<a id='back' href="{% url 'home' %}">back ></a>
+<br>
 <script src="/static/js/result.js"></script>
 {% endblock %} 
