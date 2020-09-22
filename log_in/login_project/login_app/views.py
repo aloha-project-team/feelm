@@ -12,7 +12,8 @@ def home(request):
     print(url)
     return render(request, 'home.html', content)
 
-def result(request, code):
+def result(request):
+    code=request.GET.get('code')
     content={
         'code':code
     }

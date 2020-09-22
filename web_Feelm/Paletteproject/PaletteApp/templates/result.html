@@ -12,16 +12,22 @@
 <!-- content 1 user_profile -->
 <div class='content' id='user_profile'>
     User Profile <br>
-    Profile Image <br>
-    {% if is_exist %}
-        ID : {{ account }}
+    {% if info.is_exist %}
+    <div class="profile_box">
+        <!-- <img src="{{ info.img_url }}" alt="프로필이미지" width="100px" height="100px"><br> -->
+        <div>
+            <!-- ID : {{ info.account }}<br>
+            name: {{ info.profile_name }} <br>
+            follow : {{ info.follow }} <br>
+            follower : {{ info.follower }}<br>
+            introduce : {{ info.introduce }} -->
+            name : {{info.username}}<br>
+            media count : {{info.media_count}}
+        </div>
+    </div>
     {% else %}
-        ID : None
+        ID : None (로그인 되지 않음)
     {% endif %}
-    <br>
-    follow : <br>
-    follower : <br>
-    introduce :
 </div>
 <!-- content 2 emotion palette -->
 <div class='content' id='emotion_palette'>
@@ -40,13 +46,13 @@
     <div class='palette_option'>
         <div>원하는 모양의 팔레트를 선택해보세요</div>
         <div class="radio">
-            <input type="radio" name="template" id='square' onclick="changeTemplate()" checked/>
+            <input type="radio" name="template" id='square' class="more" onclick="changeTemplate()" checked/>
             <label for="square">square</label>
-            <input type="radio" name="template" id='circle' onclick="changeTemplate()" />
+            <input type="radio" name="template" id='circle' class="more" onclick="changeTemplate()" />
             <label for="circle">circle</label>
-            <input type="radio" name="template" id='heart' onclick="changeTemplate()" />
+            <input type="radio" name="template" id='heart' class="more" onclick="changeTemplate()" />
             <label for="heart">heart</label>
-            <input type="radio" name="template" id='animal' onclick="changeTemplate()" />
+            <input type="radio" name="template" id='animal' class="more" onclick="changeTemplate()" />
             <label for="animal">animal</label>
         </div>
     </div>
@@ -71,14 +77,10 @@
             </div>
             <div>
                 <svg><rect width="13" height="13" style = "fill:skyblue;"></svg> 
-                <span>neutral</span>
-            </div>
-            <div>
-                <svg><rect width="13" height="13" style = "fill:#E3A6FC;"></svg> 
                 <span>sadness</span>
             </div>
             <div>
-                <svg><rect width="13" height="13" style = "fill:#BDBDBD;"></svg> 
+                <svg><rect width="13" height="13" style = "fill:#E3A6FC;"></svg> 
                 <span>surprise</span>
             </div>
         </div>
@@ -88,23 +90,19 @@
                 <span>anger</span>
             </div>
             <div>
-                <img src="{% static 'image/animal_fear.svg' %}" alt="" width="16">fear
+                <img src="{% static 'image/animal_fear.svg' %}" alt="" width="16">
                 <span>fear</span>
             </div>
             <div>
-                <img src="{% static 'image/animal_joy.svg' %}" alt="" width="16">joy
+                <img src="{% static 'image/animal_joy.svg' %}" alt="" width="16">
                 <span>joy</span>
             </div>
             <div>
-                <img src="{% static 'image/animal_love.svg' %}" alt="" width="16">love <br>
+                <img src="{% static 'image/animal_love.svg' %}" alt="" width="16">
                 <span>love</span>
             </div>
             <div>
-                <img src="{% static 'image/animal_neutral.svg' %}" alt="" width="16">neutral
-                <span>neutral</span>
-            </div>
-            <div>
-                <img src="{% static 'image/animal_sad.svg' %}" alt="" width="16">sadness
+                <img src="{% static 'image/animal_sad.svg' %}" alt="" width="16">
                 <span>sadness</span>
             </div>
             <div>
@@ -150,10 +148,6 @@
                         <svg class="six">
                                 <rect width="15" height="15">
                         </svg>
-                        {% elif day == 7 %}
-                        <svg class="seven">
-                                <rect width="15" height="15">
-                        </svg>
                         {% else %}
                         {% endif %}
                     {% endfor %}
@@ -187,10 +181,6 @@
                         </svg>
                         {% elif day == 6 %}
                         <svg class="six">
-                                <circle  cx="7.5" cy="7.5" r="7.5"/>
-                        </svg>
-                        {% elif day == 7 %}
-                        <svg class="seven">
                                 <circle  cx="7.5" cy="7.5" r="7.5"/>
                         </svg>
                         {% else %}
@@ -234,11 +224,6 @@
                             <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
                             C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z" />
                         </svg>
-                        {% elif day == 7 %}
-                        <svg class="seven">
-                            <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75
-                            C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z" />
-                        </svg>
                         {% else %}
                         {% endif %}
                     {% endfor %}
@@ -259,10 +244,8 @@
                         {% elif day == 4 %}
                         <img src="{% static 'image/animal_love.svg' %}" alt="" width="16">
                         {% elif day == 5 %}
-                        <img src="{% static 'image/animal_neutral.svg' %}" alt="" width="16">
-                        {% elif day == 6 %}
                         <img src="{% static 'image/animal_sad.svg' %}" alt="" width="16">
-                        {% elif day == 7 %}
+                        {% elif day == 6 %}
                         <img src="{% static 'image/animal_surprise.svg' %}" alt="" width="16">
                         {% else %}
                         {% endif %}
@@ -278,56 +261,57 @@
 <div class="content">
     <div class='title'>감정 분석 Report</div>
     <div>
-        최근 30일 동안 가장 많이 들어난 감정은 {{percent}}% 에 해당하는 "{{emotion.emotion}}" 입니다. <br>
-        {{emotion.report}}<br>
+        최근 30일 동안 가장 많이 들어난 감정은 <b>{{percent.first}}%</b> 에 해당하는 <b>"{{emotion.first.emotion}}"</b> 입니다.<span id="firstReport" style="display: none;">
+                {{emotion.first.report}}
+        </span>
+        <I><span id="show" class="more" onclick="fnMore()">더보기...</span></I>
+    </div>
+    <br>
+    <div>
+        최근 30일 동안 두번째로 많이 들어난 감정은 <b>{{percent.second}}%</b> 에 해당하는 <b>"{{emotion.second.emotion}}"</b> 입니다.
+        <span id="secondReport" style="display: none;">
+            {{emotion.second.report}}
+        </span>
+        <I><span id="show2" class="more" onclick="fnMore2()">더보기...</span></I>
+    </div>
+    <br>
+    <div>
+        최근 30일 동안 세번째로 많이 들어난 감정은 <b>{{percent.third}}%</b> 에 해당하는 <b>"{{emotion.third.emotion}}"</b> 입니다.
+        <span id="thirdReport" style="display: none;">
+            {{emotion.third.report}}
+        </span>
+        <I><span id="show3" class="more" onclick="fnMore3()">더보기...</span></I>
     </div>
 </div>
 
 <div class="content">
-    <h2>"{{emotion.emotion}}" 한 당신에게 추천</h2>
+    <h2>당신에게 추천</h2>
     <div>
-        요즘 "{{emotion.emotion}}" 한 당신에게 추천드릴 컨텐츠는?
+        요즘 "{{emotion.first.emotion}} {{emotion.second.emotion}} {{emotion.third.emotion}}" 한 당신에게 추천하는 노래 들어보세요.
         <div>
-            <iframe width="300" height="150" src="{{ emotion.recommendation }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {{emotion.first.emotion}}: <br>
+            <iframe width="300" height="150" src="{{ emotion.first.recommendation }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+            {{emotion.second.emotion}}: <br>
+            <iframe width="300" height="150" src="{{ emotion.second.recommendation }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+            {{emotion.third.emotion}}: <br>
+            <iframe width="300" height="150" src="{{ emotion.third.recommendation }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <br>
+        <I><span id="youtubeshow" onclick="youtubeMore()">추천 음악 더 듣기</span></I>
+        <div id="moreyoutube" style="display: none;">
+            {{emotion.first.emotion}}: <br>
+            <iframe width="300" height="150" src="{{ emotion.first.recommendation2 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="150" src="{{ emotion.first.recommendation3 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+            {{emotion.second.emotion}}: <br>
+            <iframe width="300" height="150" src="{{ emotion.second.recommendation2 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="150" src="{{ emotion.second.recommendation3 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+            {{emotion.third.emotion}}: <br>
+            <iframe width="300" height="150" src="{{ emotion.third.recommendation2 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="300" height="150" src="{{ emotion.third.recommendation3 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <br>
     </div>
 </div>
 <a href="{% url 'home' %}">처음으로></a>
-<script>
-    function changeTemplate(){
-        if($('input:radio[id=square]').is(':checked')){
-            $('#square_div').show();
-            $('#circle_div').hide();
-            $('#heart_div').hide();
-            $('#animal_div').hide();
-
-            $('#color_option').show();
-            $('#animal_option').hide();
-        }else if($('input:radio[id=circle]').is(':checked')){
-            $('#square_div').hide();
-            $('#circle_div').show();
-            $('#heart_div').hide();
-            $('#animal_div').hide();
-
-            $('#color_option').show();
-            $('#animal_option').hide();
-        }else if($('input:radio[id=heart]').is(':checked')){
-            $('#square_div').hide();
-            $('#circle_div').hide();
-            $('#heart_div').show();
-            $('#animal_div').hide();
-
-            $('#color_option').show();
-            $('#animal_option').hide();
-        }else{
-            $('#square_div').hide();
-            $('#circle_div').hide();
-            $('#heart_div').hide();
-            $('#animal_div').show();
-
-            $('#color_option').hide();
-            $('#animal_option').show();
-        }
-    }
-</script>
+<script src="/static/js/result.js"></script>
 {% endblock %} 

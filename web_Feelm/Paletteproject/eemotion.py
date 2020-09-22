@@ -15,7 +15,7 @@ else:
     print('No GPU available, using the CPU instead.')
 
 #모델 저장된 경로
-output_dir = './model_save/'
+output_dir = './model_save4/'
 
 # Load a trained model and vocabulary that you have fine-tuned
 model = BertForSequenceClassification.from_pretrained(output_dir)
@@ -86,9 +86,8 @@ sentiment_dic = {
     1 : 'fear',
     2 : 'joy',
     3 : 'love',
-    4 : 'neutral',
-    5 : 'sadness',
-    6 : 'surprise',
+    4 : 'sadness',
+    5 : 'surprise',
 }
 
 def emotionR(sentence):
